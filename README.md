@@ -22,7 +22,9 @@ Topics auto-created:
 
 ### Fully Containerized
 All services run using a single command:
-- docker compose up --build
+```bash
+docker compose up --build
+```
 
 ## Architecture Overview
 
@@ -40,8 +42,10 @@ Kafka: payment_confirmed / payment_failed
 ## Run Locally (Docker Compose)
 
 1. Clone the repository
+```bash
   git clone https://github.com/<your-username>/payments-microservice.git
   cd payments-microservice
+  ```
 
 2. Start all services
    docker compose up --build
@@ -55,15 +59,18 @@ This will start:
 
 3. Test API
    - Create a payment:
+   ```bash
    curl -X POST http://localhost:8000/payments \
-  -H "Content-Type: application/json" \
-  -d '{"sender":"alice","receiver":"bob","amount":50}'
+        -H "Content-Type: application/json" \
+        -d '{"sender":"alice","receiver":"bob","amount":50}'
+   ```
 
   - Get a payment:
+    ```bash
     curl http://localhost:8000/payments/1
 
 ## Project Structure
-
+```
 services/
   payments-api/
     app/
