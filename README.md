@@ -41,13 +41,13 @@ Kafka: payment_confirmed / payment_failed
 
 ## Run Locally (Docker Compose)
 
-1. ### Clone the repository
+### 1. Clone the repository
 ```bash
   git clone https://github.com/<your-username>/payments-microservice.git
   cd payments-microservice
   ```
 
-2. ### Start all services
+### 2. Start all services
 ```bash
 docker compose up --build
 ```
@@ -59,7 +59,7 @@ This will start:
 - FastAPI service
 - Payment processor worker
 
-3. ### Test API
+### 3. Test API
 - Create a payment:
 ```bash
 curl -X POST http://localhost:8000/payments \
