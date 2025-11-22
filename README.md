@@ -101,4 +101,8 @@ services
 7 directories, 16 files
 ```
 ## Author
-Eleni Michala MSc Applied Artificial Intelligence — University of Warwick | BSc Computer Science — University of Cyprus
+<pre>
+Eleni Michala 
+MSc Applied Artificial Intelligence - University of Warwick | 
+BSc Computer Science - University of Cyprus
+<pre>
