@@ -102,5 +102,5 @@ services
 ```
 ## Author
 Eleni Michala 
-      MSc Applied Artificial Intelligence - University of Warwick | 
-      BSc Computer Science - University of Cyprus
+- MSc Applied Artificial Intelligence - University of Warwick | 
+- BSc Computer Science - University of Cyprus
