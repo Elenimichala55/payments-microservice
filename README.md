@@ -74,21 +74,29 @@ curl http://localhost:8000/payments/1
 
 ## Project Structure
 ```
-services/
-      payments-api/
-            app/
-                  main.py
-                  db.py
-                  models.py
-                  schemas.py
-            Dockerfile
-            requirements.txt
-      payments-processor/
-            app/
-                  processor.py
-                  kafka_consumer.py
-                  db.py
-            Dockerfile
-            wait_for_kafka.sh
-docker-compose.yml
+services
+├── payments-api
+│   ├── Dockerfile
+│   ├── app
+│   │   ├── __init__.py
+│   │   ├── db.py
+│   │   ├── kafka_producer.py
+│   │   ├── main.py
+│   │   ├── models
+│   │   │   ├── __init__.py
+│   │   │   └── payment.py
+│   │   └── schemas
+│   │       ├── __init__.py
+│   │       └── payment_schema.py
+│   └── requirements.txt
+└── payments-processor
+    ├── Dockerfile
+    ├── app
+    │   ├── __init__.py
+    │   ├── db.py
+    │   ├── kafka_consumer.py
+    │   └── processor.py
+    └── wait_for_kafka.sh
+
+7 directories, 16 files
 ```
