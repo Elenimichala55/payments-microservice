@@ -1,29 +1,28 @@
-# Payments Microservice — (Kafka + FastAPI + PostgreSQL + Docker Compose)
+# Payments Microservice - (Kafka + FastAPI + PostgreSQL + Docker Compose)
 A fully containerized payments microservice demonstrating event-driven architecture using Apache Kafka, FastAPI, PostgreSQL, and Python workers.
 The service allows clients to create payments, publishes events to Kafka, processes them asynchronously with a background worker, and updates the database.
 
 ## Features
-- ### FastAPI Payments API
-  - Create new payments
-  - Store data in PostgreSQL
-  - Emit a Kafka payment_created event
+### FastAPI Payments API
+- Create new payments
+- Store data in PostgreSQL
+- Emit a Kafka payment_created event
 
-- ### Payments Processor (Worker Service)
-  - Listens to Kafka events
-  - Simulates fraud check / processing
-  - Updates payment status (CONFIRMED or FAILED)
-  - Publishes results to new Kafka topics
+### Payments Processor (Worker Service)
+- Listens to Kafka events
+- Simulates fraud check / processing
+- Updates payment status (CONFIRMED or FAILED)
+- Publishes results to new Kafka topics
 
-- ### Kafka Integration
-
+### Kafka Integration
 Topics auto-created:
-  - payment_created
-  - payment_confirmed
-  - payment_failed
+- payment_created
+- payment_confirmed
+- payment_failed
 
-- ### Fully Containerized
+### Fully Containerized
 All services run using a single command:
-  - docker compose up --build
+- docker compose up --build
 
 ## Architecture Overview
 
