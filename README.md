@@ -27,7 +27,7 @@ docker compose up --build
 ```
 
 ## Architecture Overview
-
+```
 FastAPI (Payments API)
       ↓ emits
 Kafka topic: payment_created
@@ -37,18 +37,20 @@ Payments Processor (Python worker)
 PostgreSQL (payments table)
       ↓ emits
 Kafka: payment_confirmed / payment_failed
-
+```
 
 ## Run Locally (Docker Compose)
 
-1. Clone the repository
+1. ### Clone the repository
 ```bash
   git clone https://github.com/<your-username>/payments-microservice.git
   cd payments-microservice
   ```
 
-2. Start all services
-   docker compose up --build
+2. ### Start all services
+```bash
+docker compose up --build
+```
 
 This will start:
 - Zookeeper
@@ -57,17 +59,18 @@ This will start:
 - FastAPI service
 - Payment processor worker
 
-3. Test API
-   - Create a payment:
-   ```bash
-   curl -X POST http://localhost:8000/payments \
-        -H "Content-Type: application/json" \
-        -d '{"sender":"alice","receiver":"bob","amount":50}'
-   ```
+3. ### Test API
+- Create a payment:
+```bash
+curl -X POST http://localhost:8000/payments \
+-H "Content-Type: application/json" \
+-d '{"sender":"alice","receiver":"bob","amount":50}'
+```
 
-  - Get a payment:
-    ```bash
-    curl http://localhost:8000/payments/1
+- Get a payment:
+```bash
+curl http://localhost:8000/payments/1
+```
 
 ## Project Structure
 ```
@@ -85,5 +88,4 @@ services/
       db.py
     wait_for_kafka.sh
 docker-compose.yml
-
-
+```
