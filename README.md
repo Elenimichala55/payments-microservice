@@ -72,6 +72,14 @@ curl -X POST http://localhost:8000/payments \
 curl http://localhost:8000/payments/1
 ```
 
+- You can also explore and test all API endpoints through the interactive Swagger UI at:
+```bash
+http://127.0.0.1:8000/docs
+```
+
+<img width="712" height="392" alt="image" src="https://github.com/user-attachments/assets/f1e5290a-5fda-49f2-838f-b9b955be5c67" />
+
+
 ## Project Structure
 ```
 services
